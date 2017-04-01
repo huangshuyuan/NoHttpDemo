@@ -4,7 +4,7 @@ github 项目源码： https://github.com/yanzhenjie/NoHttp
 
 开发文档：http://doc.nohttp.net/162186
 
-##使用方法
+## 使用方法
 
 Gradle
 
@@ -20,11 +20,11 @@ compile 'com.yanzhenjie.nohttp:nohttp:1.1.1'
 compile 'com.yanzhenjie.nohttp:okhttp:1.1.1'
 ```
 
-####初始化
+#### 初始化
 
 NoHttp初始化需要一个Context，最好在Application的onCreate()中初始化，记得在manifest.xml中注册Application。
 
-####高级自定义初始化
+#### 高级自定义初始化
 
 * 配置超时毫秒数，默认10 * 1000ms
 ```
@@ -158,7 +158,7 @@ request.add("website", "http://www.yanzhenjie.com");
 ```
 
 
-*　3、添加请求到队列
+* 3、添加请求到队列
 
 ```
 queue.add(0, request, new OnResponseListener<String>(){
