@@ -4,6 +4,9 @@ github 项目源码： https://github.com/yanzhenjie/NoHttp
 
 开发文档：http://doc.nohttp.net/162186
 
+
+
+
 ## 使用方法
 
 Gradle
@@ -198,6 +201,32 @@ queue.add(0, request, new OnResponseListener<String>(){
 
 当然如果你不想这么用，那么你可以每个请求都new listener()。
 
+#### NoHttp支持缓存
 
+```
+ Request<String> request = NoHttp.createStringRequest(Constants.URL_NOHTTP_METHOD);
+        request.add("name", "yanzhenjie");
+        request.add("pwd", 123);
+        request.setCacheKey("CacheKeyRequestNetworkFailedReadCacheString");//
+        // 这里的key是缓存数据的主键，默认是url，使用的时候要保证全局唯一，否则会被其他相同url数据覆盖。
+        request.setCacheMode(CacheMode.REQUEST_NETWORK_FAILED_READ_CACHE);
+        //设置为REQUEST_NETWORK_FAILED_READ_CACHE表示请求服务器失败，就返回上次的缓存，如果缓存为空才会请求失败。
+        request(0, request, stringHttpListener, false, true);
+```
 
+```
+  private HttpListener<Bitmap> imageHttpListener = new HttpListener<Bitmap>() {
+        @Override
+        public void onSucceed(int what, Response<Bitmap> response) {
+            String string = response.isFromCache() ? getString(R.string.request_from_cache) : getString(R.string
+                    .request_from_network);
+            showImageDialog(string, response.get());
+        }
+
+        @Override
+        public void onFailed(int what, Response<Bitmap> response) {
+            showMessageDialog(R.string.request_failed, response.getException().getMessage());
+        }
+    };
+```
 
