@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">NoHttpDemo</string>
+    <string name="wait_dialog_title">正在请求，请稍后…</string>
+    <string name="know">知道了</string>
+    <string name="request_failed">请求失败</string>
+    <!-- error -->
+    <string name="error_please_check_network">请检查网络。</string>
+    <string name="error_timeout">请求超时，网络不好或者服务器不稳定。</string>
+    <string name="error_not_found_server">未发现指定服务器，清切换网络后重试。</string>
+    <string name="error_url_error">URL错误。</string>
+    <string name="error_not_found_cache">没有找到缓存.</string>
+    <string name="error_unknow">未知错误。</string>
+    <!-- title filed-->
+    <string name="title1">欢迎页</string>
+    <string name="title2">网络请求</string>
+    <string name="title3">配置文件实现网络请求</string>
+    <string name="titleimg">各种类型网络图片加载</string>
+    <string name="title_activity_test">TestActivity</string>
+    <!-- Common -->
+
+    <string name="request_start">发起请求</string>
+
+    <string name="request_original_result">响应码：%1$d\n花费时间：%2$d毫秒。</string>
+
+    <string name="method_request_failed">有的方法为什么请求失败？</string>
+    <string name="method_request_failed_reason">在RFC2616中规定了Http1.1支持的请求方法，有些服务器、客户端(Android系统)不支持某些请求方法，所以请求失败是正常的，但是我们还是要遵守协议，推荐服务器和客户端都支持，这是非常好的设计和体验。</string>
+
+    <string name="request_succeed">请求成功</string>
+
+    <!-- RequestMethod -->
+
+    <string name="request_json_result">请求方法：%1$s\n请求地址：%2$s\n响应数据：%3$s\n业务状态码：%4$s。</string>
+    <string name="request_succeed_head">请求成功, 请求方式为HEAD, 没有响应内容。</string>
+    <string name="request_method_head">请求方法为HEAD，没有响应内容。</string>
+    <string name="request_method_patch">服务器不支持的请求方法。</string>
+    <string name="request_method_not_allow">服务器仅仅支持请求方法：%1$s</string>
+
+
+    <!--缓存-->
+    <string name="request_from_cache">结果来自缓存</string>
+    <string name="request_from_network">结果来自网络</string>
+</resources>
