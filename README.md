@@ -1,10 +1,23 @@
-@@ -1,83 +1 @@
+
+
 # NohttpDemo
+## 项目内容
+
+* 1、NoHttp使用(网络请求（GET、POST）、缓存等等)
+
+*  2、配置文件使用，请求参数在配置文件中获取（properties）
+
+* 3、Glide使用，各种图片的样式（后期有单独讲解的）[GlideUtils](https://github.com/huangshuyuan/GlideUtilsDemo/)
+
+![内容图](https://raw.githubusercontent.com/huangshuyuan/NoHttpDemo/ecbcc1a2ebc2524945d6ad314ca5a3822e962321/nohttp.png)
+
+
+## 参考资料
 github 项目源码： https://github.com/yanzhenjie/NoHttp
 
 开发文档：http://doc.nohttp.net/162186
 
-
+# NoHttp
 
 
 ## 使用方法
